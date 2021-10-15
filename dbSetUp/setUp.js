@@ -1,4 +1,5 @@
 const mysql=require("mysql");
+const { createUser, createThread } = require("../queries/queries");
 
 const hookUp=()=>{
     const connection = mysql.createConnection({
@@ -12,9 +13,15 @@ const hookUp=()=>{
         console.log("Connected to db!");
         connection.query("USE sql11443728;", (err, results)=>{
             if(err)throw err;
-            console.log("selecting db");
-        })
-        
+        });
+
+        // connection.query(createUser, (err, result)=>{
+        //     if(err) throw err;
+        // });
+        // connection.query(createThread, (err, result)=>{
+        //     if(err) throw err;
+        // });
+
     });
     return connection;
 };

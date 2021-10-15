@@ -13,20 +13,21 @@ app.use(cors());
 app.use(express.json());
 
 const database=db();
-app.use("get", (req, res)=>{
-    req["db"]=database;
-    next();
-}, gets);
 
-app.use("post", (req, res)=>{
+app.use("/post", (req, res, next)=>{
     req["db"]=database;
     next();
 }, posts);
+
+app.use("/get", (req, res, next)=>{
+    req["db"]=database;
+    next();
+}, gets);
 
 app.get("/", (req, res)=>{
     res.send("Conscience is live");
 })
 
-app.listen(2000, ()=>{
+app.listen(process.env.PORT || 2000, ()=>{
     console.log("Server is up and running");
 })

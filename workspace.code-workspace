@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\Cpp"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"terminal.integrated.automationShell.windows": ""
+	}
+}
