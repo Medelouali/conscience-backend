@@ -15,6 +15,15 @@ const hookUp=()=>{
             if(err)throw err;
         });
 
+        // connection.query("DROP TABLE IF EXISTS user", (err, result)=>{
+        //     if(err) throw err;
+        //     console.log("user table has been dropped...");
+        // });
+        // connection.query("DROP TABLE IF EXISTS thread", (err, result)=>{
+        //     if(err) throw err;
+        //     console.log("thread table has been dropped...");
+        // });
+
         // connection.query(createUser, (err, result)=>{
         //     if(err) throw err;
         // });
