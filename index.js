@@ -26,7 +26,7 @@ app.use("/get", (req, res, next)=>{
 
 app.get("/", (req, res)=>{
     res.send("Conscience is live");
-})
+});
 
 app.listen(process.env.PORT || 2000, ()=>{
     console.log("Server is up and running");
